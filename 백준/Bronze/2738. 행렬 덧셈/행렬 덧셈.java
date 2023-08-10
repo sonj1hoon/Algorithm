@@ -8,27 +8,19 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int N=Integer.parseInt(st.nextToken());
 		int M=Integer.parseInt(st.nextToken());
-		int[][] arrayA=new int[N][M];
-		int[][] arrayB=new int[N][M];
+		int[][] array=new int[N*2][M];
 		
-		for(int i=0; i<N; i++) {
+		for(int i=0; i<N*2; i++) {
 			StringTokenizer st1 = new StringTokenizer(br.readLine());
 			for(int j=0; j<M; j++) {
 				int input=Integer.parseInt(st1.nextToken());
-				arrayA[i][j]=input;
-			}
-		}
-		for(int i=0; i<N; i++) {
-			StringTokenizer st1 = new StringTokenizer(br.readLine());
-			for(int j=0; j<M; j++) {
-				int input=Integer.parseInt(st1.nextToken());
-				arrayB[i][j]=input;
+				array[i][j]=input;
 			}
 		}
 		for(int i=0; i<N; i++) {
 			for(int j=0; j<M; j++) {
-				int sum=arrayA[i][j]+arrayB[i][j];
-				System.out.print(sum+" ");
+				array[i][j]+=array[i+N][j];
+				System.out.print(array[i][j]+" ");
 			}System.out.println();
 		}
 	}
