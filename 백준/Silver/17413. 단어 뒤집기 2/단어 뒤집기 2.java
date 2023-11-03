@@ -6,12 +6,8 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		//int n = Integer.parseInt(br.readLine());
 		String s = br.readLine();
 		Stack<Character> stack = new Stack<>();
-//		StringTokenizer st = new StringTokenizer(s," <>");
-//		st.hasMoreTokens();
-//		st.nextToken();
 		
 		for(int i=0; i<s.length(); i++) {
 			if(s.charAt(i)=='<'){
