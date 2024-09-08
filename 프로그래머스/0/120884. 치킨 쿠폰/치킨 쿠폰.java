@@ -1,7 +1,6 @@
 class Solution {
-    public int solution(int chicken) {
+    public int solution(int coupon) {
         int answer = 0;
-        int coupon = chicken;
         
         while(coupon>=10){
             int freechicken = coupon/10; 
