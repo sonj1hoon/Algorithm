@@ -3,12 +3,11 @@ class Solution {
         String answer = "";
         
         for(int i=0; i<db.length; i++){
-            if(id_pw[0].equals(db[i][0]) && id_pw[1].equals(db[i][1])){
-                return "login";
-            }else if(id_pw[0].equals(db[i][0]) && !id_pw[1].equals(db[i][1])){
-                return "wrong pw";
+            if(id_pw[0].equals(db[i][0])){
+                if(id_pw[1].equals(db[i][1])){
+                    return "login";   
+                }return "wrong pw";
             }
-        }
-        return "fail";
+        }return "fail";
     }
 }
