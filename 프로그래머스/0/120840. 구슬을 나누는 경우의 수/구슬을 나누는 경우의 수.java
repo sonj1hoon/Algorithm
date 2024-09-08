@@ -1,14 +1,13 @@
 import java.util.*;
 class Solution {
     public int solution(int balls, int share) {
-        double answer = 1;
+        long answer = 1;
+        int ballShare = 1;
         for(int i=share+1; i<=balls; i++){
             answer*=i;
+            answer/=ballShare;
+            ballShare++;
         }
-        for(int i=2; i<=balls-share; i++){
-            answer/=i;
-        }
-        
-        return (int)Math.round(answer);
+        return (int)answer;
     }
 }
