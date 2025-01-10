@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] arr) {
-        Deque<Integer> dq = new LinkedList<>();
+        Deque<Integer> dq = new ArrayDeque<>();
         
         dq.addLast(arr[0]);
         for (int i = 1; i < arr.length; i++) {
