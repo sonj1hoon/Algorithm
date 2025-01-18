@@ -1,18 +1,14 @@
 class Solution {
     public int solution(int n, int m, int[] section) {
-        int answer = 1;
-        int start = section[0]; 
-        int end = section[0] + (m-1);
+        int cnt = 1;
+        int start = section[0];
         
-        for(int i:section){
-            if(i>=start && i<=end){
-                continue;
-            }else{
-                start = i;
-                end = i + (m-1);
-                answer++;
+        for(int i=1; i<section.length; i++){
+            if(start + (m-1) < section[i]){
+                start = section[i];
+                cnt++;
             }
         }
-        return answer;
+        return cnt;
     }
 }
