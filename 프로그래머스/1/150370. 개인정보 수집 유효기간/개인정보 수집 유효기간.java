@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    public int[] solution(String today, String[] terms, String[] privacies){ 
+    public ArrayList<Integer> solution(String today, String[] terms, String[] privacies){ 
         ArrayList<Integer> list = new ArrayList<>();
         HashMap<String, Integer> map = new HashMap<>();
         
@@ -23,11 +23,7 @@ class Solution {
                 list.add(i+1);
             }
         }
-        int[] answer = new int[list.size()];
-        for(int i=0; i<list.size(); i++){
-            answer[i] = list.get(i);
-        }
-        return answer;
+        return list;
     }
     
     // 총 일수의 합
