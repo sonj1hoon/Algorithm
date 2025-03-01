@@ -2,22 +2,28 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(br.readLine());
-		int[] M=new int[N];
-		int max=-999999999;
-		int min=99999999;
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		for(int i=0; i<N; i++) {
-			int num = Integer.parseInt(st.nextToken());
-			if(num>max) {
-				max=num;
-			}
-			if(num<min) {
-				min=num;
-			}
-		}
-		System.out.println(min*max);
-	}
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int T = Integer.parseInt(br.readLine());
+
+        int[] arr = new int[T];
+        int max = 1, min = 1000001;
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        if(T==1){
+            System.out.println((int)Math.pow(Integer.parseInt(st.nextToken()),2));
+        }else{
+            for(int i=0; i<T; i++){
+                int n =Integer.parseInt(st.nextToken());
+                if(n>max){
+                    max = n;
+                }
+                if(n<min){
+                    min = n;
+                }
+            }
+            System.out.println(max*min);
+        }
+    }
 }
